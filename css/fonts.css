@@ -1,0 +1,35 @@
+/* ==========================
+   Adobe Fonts - Unbounded
+========================== */
+
+@import url("https://use.typekit.net/pbs3hyg.css");
+
+
+/* ==========================
+   General Sans Variable
+========================== */
+
+@font-face {
+    font-family: "General Sans";
+    src:
+        url("../assets/fonts/general_sans/GeneralSans-Variable.woff2") format("woff2"),
+        url("../assets/fonts/general_sans/GeneralSans-Variable.woff") format("woff"),
+        url("../assets/fonts/general_sans/GeneralSans-Variable.ttf") format("truetype");
+
+    font-weight: 200 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "General Sans";
+    src:
+        url("../assets/fonts/general_sans/GeneralSans-VariableItalic.woff2") format("woff2"),
+        url("../assets/fonts/general_sans/GeneralSans-VariableItalic.woff") format("woff"),
+        url("../assets/fonts/general_sans/GeneralSans-VariableItalic.ttf") format("truetype");
+
+    font-weight: 200 700;
+    font-style: italic;
+    font-display: swap;
+}
