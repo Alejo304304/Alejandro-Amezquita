@@ -23,9 +23,18 @@ body {
     font-family: var(--font-body);
     font-weight: 400;
 
-    background-color: var(--color-bg);
     color: var(--color-text);
 
+
+    background-color: var(--color-bg);
+
+    background-image: url("../assets/images/fondo.svg");
+
+    background-repeat: repeat;
+
+    background-size: 350px;
+
+    
 }
 
 h1,
@@ -56,7 +65,6 @@ p {
 /* ======================
    HEADER
 ====================== */
-
 .header {
 
     position: fixed;
@@ -70,7 +78,20 @@ p {
 
     padding: 1.5rem 2rem;
 
+    background-color: transparent;
+
+    transition: background-color 0.3s ease;
 }
+
+
+/* Fondo cuando el menú está abierto */
+
+.header.menu-open {
+
+    background-color: #05090A;
+}
+
+
 
 
 /* ======================
@@ -94,7 +115,7 @@ p {
 
 .nav-logo img {
 
-    width: 42px;
+    width: 150px;
 
     height: auto;
 
@@ -126,13 +147,34 @@ p {
 }
 
 
-.menu-toggle img {
+.menu-icon {
+    margin-left: 50px;
 
     width: 24px;
-
     height: 24px;
 
     display: block;
+
+    transition: transform 0.3s ease;
+
+    transform-origin: center;
+}
+
+
+/* Estado abierto */
+
+.menu-icon.active {
+
+    transform: rotate(90deg) scale(1.05);
+
+}
+
+
+/* Cuando el menú esté abierto */
+
+.menu-icon.active {
+
+    transform: rotate(90deg) scale(1.05);
 
 }
 
@@ -143,9 +185,13 @@ p {
 
 .nav-contact-btn {
 
+    margin-right: 50px;
+
+    margin-left: 20px;
+
     font-family: var(--font-heading);
 
-    font-weight: 300;
+    font-weight: 500;
 
     font-size: 0.85rem;
 
@@ -153,7 +199,7 @@ p {
 
     text-transform: uppercase;
 
-    color: var(--color-text);
+    color: #dbd8ce;
 
     text-decoration: none;
 
@@ -161,16 +207,18 @@ p {
 
     border: 1px solid var(--color-text);
 
+    border-radius: 25px;
+
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
-
+    
 }
 
 
 .nav-contact-btn:hover {
 
-    background-color: var(--color-text);
+    background-color: #dbd8ce;
 
     color: var(--color-bg);
 
@@ -185,11 +233,13 @@ p {
 
     position: absolute;
 
-    top: calc(100% + 0.5rem);
+    top: 100%;
 
-    left: 50%;
+    left: 0;
 
-    transform: translateX(-50%) translateY(-20px);
+    width: 100%;
+
+    background-color: #05090A;
 
     opacity: 0;
 
@@ -197,9 +247,12 @@ p {
 
     pointer-events: none;
 
+    transform: translateY(-10px);
+
     transition:
         opacity 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        visibility 0.3s ease;
 
 }
 
@@ -212,7 +265,7 @@ p {
 
     pointer-events: auto;
 
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 
 }
 
@@ -225,13 +278,14 @@ p {
 
     flex-direction: column;
 
-    gap: 1.5rem;
+    gap: 2.5rem;
 
     align-items: center;
 
     margin: 0;
 
-    padding: 2rem;
+    padding: 3rem;
+
 
 }
 
@@ -240,13 +294,13 @@ p {
 
     text-decoration: none;
 
-    color: var(--color-text);
+    color:  #dbd8ce;
 
     font-family: var(--font-heading);
 
-    font-size: 1rem;
+    font-size: 3.5rem;
 
-    font-weight: 400;
+    font-weight: 600;
 
     transition: opacity 0.3s ease;
 
@@ -255,6 +309,32 @@ p {
 
 .dropdown-menu a:hover {
 
+    scale: 1.5;
+
     opacity: 0.6;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prueba {
+    margin-top: 200px;
+    width: 1200px;
+
+    height: 1500px;
+}
+
+.prueba img {
+    width: 100%;
+    height: auto;
 }

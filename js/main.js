@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const initializeMenu = () => {
@@ -7,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const dropdownMenu = document.getElementById("dropdown-menu");
 
-        if (!menuButton || !dropdownMenu) {
+        const header = document.querySelector(".header");
+
+
+        if (!menuButton || !dropdownMenu || !header) {
 
             setTimeout(initializeMenu, 100);
 
@@ -16,9 +18,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        menuButton.addEventListener("click", () => {
+        const menuIcon = menuButton.querySelector(".menu-icon");
+
+
+        menuButton.addEventListener("click", (event) => {
+
+            event.stopPropagation();
 
             dropdownMenu.classList.toggle("active");
+
+            header.classList.toggle("menu-open");
+
+            menuIcon.classList.toggle("active");
 
 
             const expanded =
@@ -44,6 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
             if (clickedOutside) {
 
                 dropdownMenu.classList.remove("active");
+
+                header.classList.remove("menu-open");
+
+                menuIcon.classList.remove("active");
 
                 menuButton.setAttribute(
                     "aria-expanded",
