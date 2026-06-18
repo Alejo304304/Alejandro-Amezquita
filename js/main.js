@@ -1,77 +1,93 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* ========================================
+   MENU HAMBURGUESA
+======================================== */
 
-    const initializeMenu = () => {
+function initializeMenu() {
 
-        const menuButton = document.getElementById("menu-toggle");
+    const menuButton = document.getElementById("menu-toggle");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+    const header = document.querySelector(".header");
 
-        const dropdownMenu = document.getElementById("dropdown-menu");
+    if (!menuButton || !dropdownMenu || !header) {
 
-        const header = document.querySelector(".header");
+        setTimeout(initializeMenu, 100);
 
+        return;
 
-        if (!menuButton || !dropdownMenu || !header) {
+    }
 
-            setTimeout(initializeMenu, 100);
+    const menuIcon = menuButton.querySelector(".menu-icon");
 
-            return;
+    menuButton.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        dropdownMenu.classList.toggle("active");
+
+        header.classList.toggle("menu-open");
+
+        if (menuIcon) {
+            menuIcon.classList.toggle("active");
+        }
+
+    });
+
+    document.addEventListener("click", (event) => {
+
+        const clickedOutside =
+
+            !menuButton.contains(event.target) &&
+            !dropdownMenu.contains(event.target);
+
+        if (clickedOutside) {
+
+            dropdownMenu.classList.remove("active");
+
+            header.classList.remove("menu-open");
+
+            if (menuIcon) {
+                menuIcon.classList.remove("active");
+            }
 
         }
 
+    });
 
-        const menuIcon = menuButton.querySelector(".menu-icon");
+}
 
-
-        menuButton.addEventListener("click", (event) => {
-
-            event.stopPropagation();
-
-            dropdownMenu.classList.toggle("active");
-
-            header.classList.toggle("menu-open");
-
-            menuIcon.classList.toggle("active");
+initializeMenu();
 
 
-            const expanded =
-                menuButton.getAttribute("aria-expanded") === "true";
+/* ========================================
+   NAV SCROLL
+======================================== */
 
+function initScrollNavbar() {
 
-            menuButton.setAttribute(
-                "aria-expanded",
-                !expanded
-            );
+    const header = document.querySelector(".header");
 
-        });
+    if (!header) {
 
+        setTimeout(initScrollNavbar, 100);
 
-        document.addEventListener("click", (event) => {
+        return;
 
-            const clickedOutside =
+    }
 
-                !menuButton.contains(event.target) &&
-                !dropdownMenu.contains(event.target);
+    window.addEventListener("scroll", () => {
 
+        if (window.scrollY > 50) {
 
-            if (clickedOutside) {
+            header.classList.add("scrolled");
 
-                dropdownMenu.classList.remove("active");
+        } else {
 
-                header.classList.remove("menu-open");
+            header.classList.remove("scrolled");
 
-                menuIcon.classList.remove("active");
+        }
 
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+    });
 
-            }
+}
 
-        });
-
-    };
-
-
-    initializeMenu();
-
-});
+initScrollNavbar();
