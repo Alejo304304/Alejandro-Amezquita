@@ -17,6 +17,8 @@
 
 }
 
+
+
 a {
     text-decoration: none;
     color: #dbd8ce;
@@ -26,10 +28,10 @@ a {
 body {
 
     font-family: var(--font-body);
+
     font-weight: 400;
 
     color: var(--color-text);
-
 
     background-color: var(--color-bg);
 
@@ -42,6 +44,8 @@ body {
         
 }
 
+
+
 h1,
 h2,
 h3,
@@ -51,11 +55,13 @@ h6 {
 
     font-family: var(--font-heading);
 
-    font-weight: 600;
-    
+    font-weight: 700;
+
     line-height: 1.1;
 
 }
+
+
 
 
 p {
@@ -95,9 +101,18 @@ p {
 
 .header.menu-open {
 
-    background-color: #05090A;
+    background:#05090a !important;
+
+    backdrop-filter:none;
 }
 
+.header.scrolled.menu-open{
+
+    background:#05090a !important;
+
+    backdrop-filter:none;
+
+}
 
 
 
@@ -967,7 +982,7 @@ main {
 
     align-items: flex-start;
 
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 
 }
 
@@ -976,7 +991,7 @@ main {
 
     font-family: var(--font-heading);
 
-    font-size: clamp(4rem, 8vw, 8rem);
+    font-size: clamp(3rem, 4vw, 8rem);
 
     line-height: .9;
 
@@ -1000,9 +1015,9 @@ main {
 
     display: flex;
 
-    gap: 8rem;
+    gap: 6rem;
 
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 
 }
 
@@ -1030,16 +1045,21 @@ main {
 
 /* CARDS */
 
-.project-card {
+.project-card {    
 
     transition: .4s ease;
+
 
 }
 
 
 .project-card:hover {
 
-    transform: scale(1.005);
+    
+
+    border-color: #dbd8ce;
+
+    transform: scale(1.01);
 
 }
 
@@ -1050,7 +1070,7 @@ main {
 
     display: block;
 
-    border-radius: 10px;
+    border-radius: 15px;
 
 }
 
@@ -1059,21 +1079,21 @@ main {
 
 .project-card.large {
 
-    width: 650px;
+    width: 900px;
 
 }
 
 
 .project-card.medium {
 
-    width: 420px;
+    width: 600px;
 
 }
 
 
 .project-card.small {
 
-    width: 320px;
+    width: 500px;
 
 }
 
@@ -1082,7 +1102,17 @@ main {
 
 .project-info {
 
-    padding-top: 1rem;
+    padding: 1rem;
+
+    padding-top: 2rem;
+
+    background-color: rgba(14, 14, 14, 0.2);
+
+    border-radius: 15px;    
+
+    margin-top: -2rem;   
+
+
 
 }
 
@@ -1091,7 +1121,7 @@ main {
 
     font-family: var(--font-heading);
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     margin-bottom: .3rem;
 
@@ -1100,9 +1130,13 @@ main {
 
 .project-info span {
 
-    font-size: .8rem;
+    font-size: .9rem;
 
-    opacity: .6;
+    color: #f5322c;
+
+    opacity: .80;
+
+    font-weight: 500;
 
 }
 
@@ -1436,9 +1470,11 @@ main {
 .section-number,
 .section-side-text {
 
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
 
     font-size: 1rem;
+
+    font-weight: 300;
 
     text-transform: uppercase;
 
