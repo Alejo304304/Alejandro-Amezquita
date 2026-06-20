@@ -22,8 +22,12 @@ async function loadComponent(elementId, filePath) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    loadComponent("navbar", "navbar.html");
+    // Detecta si estamos dentro de la carpeta "proyectos"
+    const basePath = window.location.pathname.includes("/proyectos/")
+        ? "../"
+        : "";
 
-    loadComponent("footer", "footer.html");
+    loadComponent("navbar", basePath + "navbar.html");
+    loadComponent("footer", basePath + "footer.html");
 
 });

@@ -27,6 +27,8 @@ a {
 
 body {
 
+    width: 98%;
+
     font-family: var(--font-body);
 
     font-weight: 400;
@@ -40,6 +42,8 @@ body {
     background-repeat: repeat;
 
     background-size: 350px;
+
+    /*overflow-x: hidden;*/
 
         
 }
@@ -66,6 +70,8 @@ h6 {
 
 p {
 
+    font-size: 1rem;
+
     font-family: var(--font-body);
 
     font-weight: 400;
@@ -73,6 +79,9 @@ p {
     line-height: 1.7;
 
 }
+
+
+
 
 
 /* ======================
@@ -83,6 +92,7 @@ p {
     position: fixed;
 
     top: 0;
+
     left: 0;
 
     width: 100%;
@@ -145,6 +155,18 @@ p {
 
 }
 
+.logo-desktop {
+
+    
+}
+
+.logo-mobile {
+
+    margin-top: -35px;
+
+    opacity: 0;
+}
+
 
 /* ======================
    MENU BUTTON
@@ -170,10 +192,12 @@ p {
 
 
 .menu-icon {
-    margin-left: 50px;
+    
+    margin-left: 15px;
 
-    width: 24px;
-    height: 24px;
+    width: 30px;
+
+    height: 30px;
 
     display: block;
 
@@ -207,9 +231,7 @@ p {
 
 .nav-contact-btn {
 
-    margin-right: 50px;
-
-    margin-left: 20px;
+    margin-right: 5%;
 
     font-family: var(--font-heading);
 
@@ -261,6 +283,8 @@ p {
 
     width: 100%;
 
+    height: 1400px;
+
     background-color: #05090A;
 
     opacity: 0;
@@ -287,7 +311,7 @@ p {
 
     pointer-events: auto;
 
-    transform: translateY(0);
+    transform: translateY(-10px);
 
 }
 
@@ -320,11 +344,13 @@ p {
 
     font-family: var(--font-heading);
 
-    font-size: 3.5rem;
+    font-size: 6rem;
 
     font-weight: 600;
 
     transition: opacity 0.3s ease;
+
+    margin-right: 50px;
 
 }
 
@@ -374,10 +400,89 @@ p {
 }
 
 
+/* ========================================
+   RESPONSIVE NAV 
+======================================== */
+
+
+/* Desktop */
+@media (max-width: 1200px) {
+
+
+
+    .logo-desktop {               
+
+        opacity: 0;
+    
+}
+
+    .logo-mobile {
+
+        opacity: 1;
+
+    }
+
+    .menu-icon {           
+
+        width: 25px;
+
+        height: 25px;
+
+    }
+
+
+    .nav-contact-btn {        
+
+        font-size: 0.75rem;
+
+        padding: 0.75rem 1.2rem;
+    }
+
+
+   
+
+
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+
+    .dropdown-menu a {
+
+        font-size: 4rem;
+
+
+    }
+
+
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
 
 
 
 
+
+}
+
+
+
+
+
+
+
+
+
+/* ================================================================================ */
+
+
+/* ========================================
+   ABOUT ME
+======================================== */
 
 
 
@@ -527,6 +632,10 @@ main {
 
     width: 100%;
 
+    max-height: 600px;
+
+
+
 }
 
 
@@ -534,7 +643,7 @@ main {
 
     width: 100%;
 
-    height: 650px;
+    height: 600px;
 
     object-fit: cover;
 
@@ -544,6 +653,54 @@ main {
 
 }
 
+/* ========================================
+   RESPONSIVE HERO
+======================================== */
+
+
+/* Desktop */
+@media (max-width: 1200px) {
+
+    .hero-icon {
+
+        width: 28px;
+
+        height: 28px;
+
+    }
+
+    .hero-label {
+
+        font-size: 0.5rem;
+    }
+
+    .hero-subtitle {
+
+        font-size: 0.5rem;
+    }
+
+
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+}
+
+
+
+
+
+
+
+
+/* ================================================================================ */
 
 /* ========================================
    ABOUT SECTION
@@ -746,7 +903,7 @@ main {
 
 .about-card p {
 
-    line-height: 1.8;
+    line-height: 1.5;
 
     color: rgba(255,255,255,.75);
 
@@ -871,20 +1028,49 @@ main {
 
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE ABOUT 
 ======================================== */
 
-@media (max-width: 992px) {
+    /* Desktop */
+@media (max-width: 1200px) {
 
-    .about-cards {
 
-        grid-template-columns: 1fr;
-
-    }
 
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
 
+    .about-cards {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 1rem;
+
+    }
+
+    .icon-placeholder {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .about-card h3 {
+
+        font-size: 1.2rem;
+
+
+
+    }
+
+   
+
+}
+
+/* Mobile */
 @media (max-width: 768px) {
 
     .about {
@@ -900,6 +1086,13 @@ main {
         gap: 1rem;
 
         align-items: flex-start;
+
+    }
+
+
+    .about-cards {
+
+        grid-template-columns: repeat(1, 1fr);
 
     }
 
@@ -927,11 +1120,18 @@ main {
 
 
 
+/* ================================================================================ */
+
+
+
+
+
 /* ========================================
    PROJECTS
 ======================================== */
 
 .projects {
+
     margin-top: 6rem;
     padding-bottom: 5rem;
 
@@ -940,6 +1140,7 @@ main {
 .projects-container {
 
     width:min(1400px,calc(100% - 4rem));
+
     margin:auto;
 
 }
@@ -957,34 +1158,50 @@ main {
 .projects-tag,
 .projects-year {
 
-    font-family:var(--font-heading);
+    font-family: var(--font-heading);
+
+    font-size: 1rem;
+
+    font-weight: 300;
+
     text-transform: uppercase;
-    color:  rgba(255,255,255,.45);
+
+    color: rgba(113, 113, 113, 0.8);
+
 }
 
 /* INTRO */
 
 .projects-intro {
 
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
     margin-bottom: 6rem;
+
 
 }
 
 .projects-intro h2{
 
-    font-family:var(--font-heading);
-    font-size:clamp(3rem,6vw,8rem);
-    line-height:.9;
+    font-family: var(--font-heading);
+
+    font-size: clamp(3rem,6vw,8rem);
+
+    line-height: .9;
+
 
 }
 
-.projects-intro p{
+.projects-intro p {
 
     max-width:420px;
+
     margin-top:5rem;
+
     line-height:1.8;
 
 }
@@ -993,9 +1210,11 @@ main {
 
 .project-row {
 
-    display:flex;
-    gap:6rem;
-    margin-bottom:6rem;
+    display: flex;
+
+    gap: 2rem;
+
+    margin-bottom: 2rem;
 
 }
 
@@ -1073,8 +1292,8 @@ main {
 
 .project-info{
 
-    margin-top:-2rem;
-    padding:2rem 1.5rem 1.2rem;
+    margin-top: 0;
+    padding-bottom: 2.5rem;
 
 }
 
@@ -1085,7 +1304,8 @@ main {
     gap:.7rem;
 
     font-family:var(--font-heading);
-    font-size:1.15rem;
+
+    font-size: 1.15rem;
 
 }
 
@@ -1120,12 +1340,48 @@ main {
 }
 
 
+/* ========================================
+   RESPONSIVE PROYECTOS
+======================================== */
+
+
+/* Desktop */
+@media (max-width: 1200px) {
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+
+    .projects-intro {    
+        
+        display: block;
+     
+    }
+
+    .projects-intro p {
+
+        max-width: 90%;
+
+
+        margin-top: 2rem;
+
+
+    }
+
+}
 
 
 
 
 
-
+/* ================================================================================ */
 
 
 
@@ -1190,9 +1446,9 @@ main {
 
     font-family: var(--font-heading);
 
-    font-size: clamp(4rem, 6vw, 6rem);
+    font-size: clamp(2rem, 4vw, 4rem);
 
-    line-height: .9;
+    line-height: 1.2;
 
     text-align: center;
 
@@ -1340,9 +1596,9 @@ main {
 
     display: grid;
 
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 0.5fr 1fr;
 
-    gap: 4rem;
+    gap: 2rem;
 
     align-items: start;
 
@@ -1431,8 +1687,47 @@ main {
 }
 
 
+/* ========================================
+   RESPONSIVE ABOUT
+======================================== */
 
 
+/* Desktop */
+@media (max-width: 1200px) {
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .career-title {
+        font-size: 2rem;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+
+    .career {
+
+        padding-top: 3rem;
+    }
+
+
+    .career-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+
+/* ======================================================= */
 
 
 
@@ -1451,36 +1746,7 @@ main {
 
 }
 
-/* ========================================
-   TOP INFO
-======================================== */
 
-.services-top {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 2rem;
-
-}
-
-.section-number,
-.section-side-text {
-
-    font-family: var(--font-heading);
-
-    font-size: 1rem;
-
-    font-weight: 300;
-
-    text-transform: uppercase;
-
-    color: rgba(113, 113, 113, 0.8);
-
-}
 
 /* ========================================
    TITLE
@@ -1682,20 +1948,6 @@ main {
 
         height: auto;
     }
-
-
-
-
-
-
-  
-
-
-
-    
-
-
- 
  
 
 /* ========================================
@@ -1755,14 +2007,23 @@ main {
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE  SERVICES
 ======================================== */
+
+/* Desktop */
+@media (max-width: 1200px) {
+
+
+
+}
+
+
 
 @media (max-width: 1024px) {
 
     .services-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
 
     }
 
@@ -1794,7 +2055,8 @@ main {
 
 }
 
-@media (max-width: 1024px) {
+/* Mobile */
+@media (max-width: 768px) {
 
     .services-grid {
 
@@ -1802,42 +2064,14 @@ main {
 
     }
 
-    .service-card,
-    .large,
-    .wide {
 
-        grid-column: auto !important;
 
-        min-height: 250px;
-
-    }
-
-    .services-top {
-
-        flex-direction: column;
-
-        gap: 1rem;
-
-        align-items: flex-start;
-
-    }
 
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* ================================================= */
 
 
 
@@ -1855,7 +2089,7 @@ main {
 
 .final-cta-container {
 
-    width: min(900px, calc(100% - 4rem));
+    width: min(950px, calc(100% - 4rem));
 
     margin: 0 auto;
 
@@ -1877,9 +2111,9 @@ main {
 
     font-family: var(--font-heading);
 
-    font-size: clamp(3rem, 6vw, 8rem);
+    font-size: clamp(3rem, 6vw, 6rem);
 
-    line-height: .9;
+    line-height: 1;
 
     text-transform: uppercase;
 
@@ -1966,7 +2200,294 @@ main {
 
 
 
+/* ==================================================== */
 
+
+
+
+
+
+
+
+
+/* ========================================
+   PROYECTOS INDIVIDUALES
+======================================== */
+
+.project-hero {
+
+    width: min(1400px, calc(100% - 4rem));
+
+    margin: 6rem auto 7rem;
+
+    text-align: center;
+
+}
+
+.project-service {
+
+    display: block;
+
+    margin-bottom: 1rem;
+
+    font-size: .9rem;
+
+    text-transform: uppercase;
+
+    opacity: .6;
+
+    letter-spacing: .15em;
+
+}
+
+.project-hero h1 {
+
+    font-family: var(--font-heading);
+
+    font-size: clamp(4rem, 10vw, 9rem);
+
+    line-height: .9;
+
+    text-transform: uppercase;
+
+    margin-bottom: 2rem;
+
+}
+
+.project-hero p {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    font-size: 1.3rem;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.7);
+
+}
+
+/* ========================================
+   COVER
+======================================== */
+
+.project-cover {
+
+    width: min(1400px, calc(100% - 4rem));
+
+    margin: 0 auto 3rem;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+}
+
+.project-cover img {
+
+    width: 100%;
+
+    max-height: 700px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+}
+
+/* ========================================
+   INFO
+======================================== */
+
+.project-info {
+
+    width: min(1400px, calc(100% - 4rem));
+
+    margin: auto;
+
+}
+
+.project-data {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 3rem;
+
+    padding-bottom: 4rem;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+.project-data span {
+
+    font-size: .8rem;
+
+    text-transform: uppercase;
+
+    opacity: .5;
+
+}
+
+.project-data h3 {
+
+    margin-top: .8rem;
+
+    font-size: 1.5rem;
+
+    font-family: var(--font-heading);
+
+}
+
+.project-text {
+
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+
+    gap: 5rem;
+
+    padding: 3rem 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+.project-text h4 {
+
+    font-family: var(--font-heading);
+
+    font-size: 1.2rem;
+
+    text-transform: uppercase;
+
+}
+
+.project-text p {
+
+    max-width: 750px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.7);
+
+}
+
+/* ========================================
+   GALLERY
+======================================== */
+
+.gallery {
+
+    width: min(1400px, calc(100% - 4rem));
+
+    margin: 8rem auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+}
+
+.gallery-item {
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+}
+
+.gallery-item img {
+
+    width: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    max-height: 700px;
+
+}
+
+/* ========================================
+   ZOOM
+======================================== */
+
+.zoom-scroll {
+
+    overflow: hidden;
+
+}
+
+.zoom-scroll img {
+
+    transform: scale(1.25);
+
+    transition: transform 1.6s cubic-bezier(.22,.61,.36,1);
+
+    will-change: transform;
+
+}
+
+/* ========================================
+   RESPONSIVE 
+======================================== */
+
+@media (max-width: 1024px) {
+
+    .project-data {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .project-text {
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .project-hero {
+
+        margin: 8rem auto 5rem;
+
+    }
+
+    .project-data {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+    }
+
+    .project-hero p {
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+
+
+
+
+
+/* ============================================================= */
 
 
 /* ========================================
@@ -1975,47 +2496,35 @@ main {
 
 .footer {
 
-    width: min(1400px, calc(100% - 4rem));
+    align-items: center;
 
-    max-width: 1400px;
+    margin: 5rem 0.5rem;
 
-    margin: 0 auto;
+    overflow: hidden;    
+
+    justify-content: center;
 
     align-items: center;
 
-    width: 100%;
-
-    margin-top: 4rem;
-
-    padding: 6rem 2rem 2rem;
-
-    overflow: hidden;
-
-    /* OPCIÓN 1 */
-
-    
-
-    /* OPCIÓN 2 */
-
-    /*
-    background: rgba(8,8,8,.75);
-    backdrop-filter: blur(12px);
-    */
-
 }
-
 
 .footer-title {
 
-    width: 100%;
+    display: flex;
 
-    margin-top: 6rem;
-
-    margin-bottom: 8rem;
-
+    justify-content: center;
 
 }
 
+.footer-title img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+}
 
 
 /* ========================================
@@ -2099,6 +2608,31 @@ main {
 
 
 
+/* ========================================
+   RESPONSIVE ---
+======================================== */
+
+
+/* Desktop */
+@media (max-width: 1200px) {
+
+
+
+
+
+    
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+}
 
 
 
@@ -2108,9 +2642,7 @@ main {
 
 
 
-
-
-
+/* ============================================================= */
 
 
 

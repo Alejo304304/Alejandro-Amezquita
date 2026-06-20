@@ -91,3 +91,34 @@ function initScrollNavbar() {
 }
 
 initScrollNavbar();
+
+
+
+
+
+
+
+
+const images = document.querySelectorAll(".zoom-scroll img");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.transform = "scale(1)";
+
+        } else {
+
+            entry.target.style.transform = "scale(1.25)";
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+images.forEach(img => observer.observe(img));
