@@ -6,7 +6,7 @@ async function loadComponent(elementId, filePath) {
 
         if (!response.ok) {
 
-            throw new Error(`No se pudo cargar ${filePath}`);
+            throw new Error(`Error cargando ${filePath}`);
 
         }
 
@@ -16,72 +16,40 @@ async function loadComponent(elementId, filePath) {
 
         container.innerHTML = html;
 
-        // Detecta si estamos dentro de /proyectos/
         const isProjectPage = window.location.pathname.includes("/proyectos/");
 
         if (isProjectPage) {
 
             // Corrige imágenes
-            container.querySelectorAll("img").forEach(img => {
+            container.querySelectorAll("[src]").forEach(element => {
 
-                const src = img.getAttribute("src");
-
-                if (!src) return;
+                const src = element.getAttribute("src");
 
                 if (
-                    src.startsWith("./assets") ||
-                    src.startsWith("assets/")
+                    src &&
+                    !src.startsWith("http") &&
+                    !src.startsWith("../")
                 ) {
 
-                    img.setAttribute(
-                        "src",
-                        "../" + src.replace("./", "")
-                    );
-
-                }
-
-            });
-
-            // Corrige SVG externos (si usas <object>)
-            container.querySelectorAll("object").forEach(obj => {
-
-                const data = obj.getAttribute("data");
-
-                if (!data) return;
-
-                if (
-                    data.startsWith("./assets") ||
-                    data.startsWith("assets/")
-                ) {
-
-                    obj.setAttribute(
-                        "data",
-                        "../" + data.replace("./", "")
-                    );
+                    element.setAttribute("src", "../" + src);
 
                 }
 
             });
 
             // Corrige enlaces internos
-
             container.querySelectorAll("a").forEach(link => {
 
                 const href = link.getAttribute("href");
 
-                if (!href) return;
-
                 if (
+                    href &&
                     href.endsWith(".html") &&
                     !href.startsWith("http") &&
-                    !href.startsWith("../") &&
-                    href !== "#"
+                    !href.startsWith("../")
                 ) {
 
-                    link.setAttribute(
-                        "href",
-                        "../" + href
-                    );
+                    link.setAttribute("href", "../" + href);
 
                 }
 
@@ -89,17 +57,14 @@ async function loadComponent(elementId, filePath) {
 
         }
 
-        // Inicializa el menú si existe
-
+        // Inicializar menú
         if (typeof initializeMenu === "function") {
 
             initializeMenu();
 
         }
 
-    }
-
-    catch (error) {
+    } catch (error) {
 
         console.error(error);
 
@@ -111,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const isProjectPage = window.location.pathname.includes("/proyectos/");
 
-    const basePath = isProjectPage ? "../" : "./";
+    const basePath = isProjectPage ? "../" : "";
 
     loadComponent("navbar", basePath + "navbar.html");
 
