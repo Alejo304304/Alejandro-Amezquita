@@ -251,7 +251,7 @@ p {
 
     border: 1px solid var(--color-text);
 
-    border-radius: 25px;
+    border-radius: 999px;
 
     transition:
         background-color 0.3s ease,
@@ -481,6 +481,15 @@ p {
     }
 
 
+    .dropdown-menu a {
+
+        font-size: 2rem;
+    }
+
+
+
+
+
 
 
     
@@ -491,6 +500,14 @@ p {
 
 /* Mobile pequeño*/
 @media (max-width: 390px) {
+
+    p {
+
+        font-size: 0.8rem;
+
+
+
+    }
 
 
     .nav-logo {
@@ -591,21 +608,11 @@ main {
 
 .hero-title {
 
-    font-family: var(--font-heading);    
-
-    font-weight: 500;
-
-    line-height: 0.9;
-
-    text-transform: uppercase;
-
     letter-spacing: -0.05em;
 
     text-align: center;
 
     margin-bottom: 8rem;
-
-    color: #dbd8ce;
 
     text-align: center;
 
@@ -681,26 +688,17 @@ main {
    IMAGEN
 ========================== */
 
-.hero-image {
-
-    width: 100%;
-
-    max-height: 600px;
-
-
-
-}
-
-
 .hero-image img {
 
     width: 100%;
 
-    height: 600px;
+    max-height: 650px;
+
+    height: auto;
 
     object-fit: cover;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     display: block;
 
@@ -739,12 +737,80 @@ main {
 /* Tablet */
 @media (max-width: 1024px) {
 
+    .hero-title {
+
+        margin-bottom: 3rem;
+    }
+
+
+    .hero-image img {
+
+        border-radius: 10px;
+}
+
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 768px) {    
+
+
+    .hero-icon img {
+
+        width: 22px;
+
+        height: 22px;
+
+    }
+
+    .hero-label {
+
+        font-size: 0.3rem;
+    }
+
+    .hero-subtitle {
+
+        font-size: 0.3rem;
+    }
 
 }
+
+
+/* Mobile pequeño*/
+@media (max-width: 390px) {    
+
+    .hero-title {
+
+        margin-bottom: 3rem;
+    }
+
+    .hero-info {
+
+        margin-bottom: 3rem;
+
+
+
+    }
+
+    .hero-image {
+
+    width: 100%;
+
+    max-height: 100px;
+
+}
+
+
+.hero-image img {
+
+    border-radius: 10px;
+}
+
+
+
+
+
+}
+
 
 
 
@@ -797,7 +863,7 @@ main {
 
     font-family: var(--font-heading);
 
-    font-size: 1rem;
+    font-size: 0.95rem;
 
     font-weight: 300;
 
@@ -876,7 +942,7 @@ main {
 
     border: 1px solid rgba(255,255,255,.12);
 
-    border-radius: 24px;
+    border-radius: 10px;
 
     padding: 3rem 2rem;
 
@@ -913,17 +979,21 @@ main {
 
     height: 52px;
 
-    border-radius: 14px;
+    border-radius: 10px;
 
     background: rgba(255,255,255,.08);
 
 }
 
 .icon-placeholder img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
-    border-radius: 14px;
+
+    border-radius: 10px;
 
     transition: all .3s ease;
 }
@@ -997,7 +1067,7 @@ main {
 
     object-fit: cover;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
     flex-shrink: 0;
 
@@ -1169,7 +1239,37 @@ main {
 
     }
 
+    
+
 }
+
+
+
+/* Mobile pequeño*/
+
+@media (max-width: 390px) {
+
+
+    .about .about-container .about-me-header span,
+    .projects .projects-container .about-me-header span,
+     .about-me .about-me-container .about-me-header span,
+     .services  .about-me-header span{
+
+        font-size: 0.7rem;
+    }  
+
+
+    .about .about-container .about-title {
+
+        font-size: 2rem;
+
+
+    }
+
+
+  
+}
+
 
 
 
@@ -1186,15 +1286,16 @@ main {
 .projects {
 
     margin-top: 6rem;
+
     padding-bottom: 5rem;
 
 }
 
 .projects-container {
 
-    width:min(1400px,calc(100% - 4rem));
+    width: min(1400px,calc(100% - 2rem));
 
-    margin:auto;
+    margin: auto;
 
 }
 
@@ -1203,7 +1304,9 @@ main {
 .projects-header {
 
     display: flex;
+
     justify-content: space-between;
+
     margin-bottom: 1rem;
 
 }
@@ -1251,11 +1354,11 @@ main {
 
 .projects-intro p {
 
-    max-width:420px;
+    max-width: 420px;
 
-    margin-top:5rem;
+    margin-top: 5rem;
 
-    line-height:1.8;
+    line-height: 1.8;
 
 }
 
@@ -1291,51 +1394,55 @@ main {
 
 /* ENLACES */
 
-.project-link{
+.project-link {
 
     display:block;
+
     color:inherit;
+
     text-decoration:none;
 
 }
 
 /* TARJETAS */
 
-.project-card{
+.project-card {
 
     transition:transform .35s ease;
 
 }
 
-.project-link:hover .project-card{
+.project-link:hover .project-card {
 
     transform:translateY(-10px);
 
 }
 
-.project-card img{
+.project-card img {
 
     width:100%;
+
     display:block;
-    border-radius:18px;
+
+    border-radius: 10px;
 
 }
 
 /* TAMAÑOS */
 
-.project-link.large{
+.project-link.large {
 
     flex: 1.6;
 
 }
 
-.project-link.medium{
+.project-link.medium {
 
     flex: 1;
 
 }
 
-.project-link.small{
+.project-link.small {
 
     flex: .85;
 
@@ -1343,20 +1450,23 @@ main {
 
 /* INFORMACIÓN */
 
-.project-info{
+.project-info {
 
     margin-top: 0;
+
     padding-bottom: 2.5rem;
 
 }
 
-.project-info h3{
+.project-info h3 {
 
-    display:flex;
-    align-items:center;
-    gap:.7rem;
+    display: flex;
 
-    font-family:var(--font-heading);
+    align-items: center;
+
+    gap: .7rem;
+
+    font-family: var(--font-heading);
 
     font-size: 1.15rem;
 
@@ -1365,10 +1475,12 @@ main {
 .project-info span{
 
     display:block;
-    margin-top:.4rem;
 
-    font-size:.85rem;
-    opacity:.5;
+    margin-top: .4rem;
+
+    font-size: .85rem;
+
+    opacity: .5;
 
 }
 
@@ -1388,8 +1500,11 @@ main {
 
 
 .btn-proyectos {
+
   display: flex;
+
   justify-content: center;
+
 }
 
 
@@ -1429,6 +1544,71 @@ main {
     }
 
 }
+
+
+/* Mobile pequeño*/
+@media (max-width: 390px) {
+
+    
+    .projects-header {
+
+        display: block;
+
+        justify-content: center;
+    }
+
+
+    .projects-intro h2 {
+
+        font-size: 1.8rem;
+    }
+
+
+
+    .project-row {
+
+        display: block;
+
+        gap: .5rem;
+
+        margin-bottom: 2rem;
+
+}
+
+
+
+
+
+    .row-left {
+
+        justify-content:center;
+
+    }
+
+    .row-center{
+
+        justify-content:center;
+
+    }
+
+    .row-right{
+
+        justify-content:center;
+
+    }
+
+
+    .project-card img {
+
+        border-radius: 10px;
+    }
+
+
+
+
+
+}
+
 
 
 
@@ -1480,7 +1660,7 @@ main {
 
     font-family: var(--font-heading);
 
-    font-size: .95rem;
+    font-size: 0.95rem;
 
     font-weight: 300;
 
@@ -1537,7 +1717,7 @@ main {
 
     object-fit: cover;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
 }
 
@@ -1693,7 +1873,7 @@ main {
 
     border: 1px solid rgba(255,255,255,.12);
 
-    border-radius: 24px;
+    border-radius: 10px;
 
     padding: 2rem;
 
@@ -1778,6 +1958,49 @@ main {
 }
 
 
+/* Mobile pequeño*/
+@media (max-width: 390px) {
+
+
+    about-me-container {
+
+        margin-bottom: -1rem;
+
+        padding-bottom: -1rem;
+    }
+
+
+
+
+    .cv-button,  .final-cta-container a, .btn-proyectos a {
+
+        font-size: .8rem;
+    }
+
+    .about-me-content h3 {
+
+        font-size: 1.3rem;
+    }
+
+    .career-title {
+
+        font-size: 1.5rem;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+}
+ 
+
+
 
 
 /* ======================================================= */
@@ -1793,9 +2016,11 @@ main {
 
     width: min(1400px, calc(100% - 4rem));
 
-    margin: 0 auto;
+    margin-top: 4rem;
 
-    padding: 6rem 0;
+    margin: 4rem auto;
+
+    padding-top: 8rem;
 
 }
 
@@ -1815,9 +2040,9 @@ main {
 
     font-family: var(--font-heading);
 
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: 4rem;
 
-    line-height: .9;
+    line-height: 1;
 
     text-transform: uppercase;
 
@@ -1849,7 +2074,7 @@ main {
 
     color: inherit;
 
-    border-radius: 25px;
+    border-radius: 10px;
 
     padding: 2rem;
 
@@ -2117,10 +2342,31 @@ main {
 
     }
 
+}
+
+
+/* Mobile pequeño*/
+@media (max-width: 390px) {  
+
+
+    .services .services-header h2 {    
+
+        font-size: 1.8rem;
+
 
 
 
 }
+
+
+
+
+
+
+
+
+}
+
 
 
 
@@ -2142,7 +2388,7 @@ main {
 
 .final-cta-container {
 
-    width: min(950px, calc(100% - 4rem));
+    width: min(950px, calc(100% - 2rem));
 
     margin: 0 auto;
 
@@ -2220,6 +2466,8 @@ main {
 
     margin-bottom: 4rem;
 
+    font-size: 1rem;
+
 }
 
 .cta-button:hover {
@@ -2251,6 +2499,42 @@ main {
 }
 
 
+/* ========================================
+   RESPONSIVE FINAL CTA
+======================================== */
+
+
+
+/* Desktop */
+@media (max-width: 1200px) {
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+}
+
+
+/* Mobile pequeño*/
+@media (max-width: 390px) {
+
+    .final-cta h2 {
+
+        font-size: 2.2rem;
+    }
+
+
+
+}
+
+
+
 
 
 /* ==================================================== */
@@ -2269,7 +2553,7 @@ main {
 
 .project-hero {
 
-    width: min(1400px, calc(100% - 4rem));
+    width: min(1400px, calc(100% - 2rem));
 
     margin: 6rem auto 7rem;
 
@@ -2299,7 +2583,7 @@ main {
 
     font-size: clamp(4rem, 10vw, 9rem);
 
-    line-height: .9;
+    line-height: 1;
 
     text-transform: uppercase;
 
@@ -2327,13 +2611,13 @@ main {
 
 .project-cover {
 
-    width: min(1400px, calc(100% - 4rem));
+    width: min(1400px, calc(100% - 2rem));
 
     margin: 0 auto 3rem;
 
     overflow: hidden;
 
-    border-radius: 25px;
+    border-radius: 10px;
 
 }
 
@@ -2347,7 +2631,7 @@ main {
 
     object-fit: cover;
 
-    border-radius: 25px;
+    border-radius: 10px;
 
 }
 
@@ -2357,7 +2641,7 @@ main {
 
 .project-info {
 
-    width: min(1400px, calc(100% - 4rem));
+    width: min(1400px, calc(100% - 2rem));
 
     margin: auto;
 
@@ -2437,7 +2721,7 @@ main {
 
 .gallery {
 
-    width: min(1400px, calc(100% - 4rem));
+    width: min(1400px, calc(100% - 2rem));
 
     margin: 8rem auto;
 
@@ -2453,7 +2737,7 @@ main {
 
     overflow: hidden;
 
-    border-radius: 20px;
+    border-radius: 10px;
 
 }
 
@@ -2490,7 +2774,7 @@ main {
 }
 
 /* ========================================
-   RESPONSIVE 
+   RESPONSIVE PROYECTOS INDIVIDUAL
 ======================================== */
 
 @media (max-width: 1024px) {
@@ -2534,6 +2818,39 @@ main {
     }
 
 }
+
+
+/* Mobile pequeño*/
+@media (max-width: 390px) {
+
+
+    .project-hero {
+
+        margin-top: 3rem;
+    }
+
+
+    .project-hero h1 {
+
+         font-size: 2rem;
+    }
+
+    .project-hero p {
+
+        font-size: 0.9rem;
+    }
+
+    .project-data h3 {
+
+        font-size: 1.4rem;
+    }
+
+
+
+
+
+}
+
 
 
 
@@ -2667,13 +2984,7 @@ main {
 
 
 /* Desktop */
-@media (max-width: 1200px) {
-
-
-
-
-
-    
+@media (max-width: 1200px) {    
 
 }
 
@@ -2686,6 +2997,34 @@ main {
 @media (max-width: 768px) {
 
 }
+
+
+
+/* Mobile pequeño*/
+@media (max-width: 390px) {
+
+
+    .footer-socials {        
+
+        display: block;
+
+        gap: 3rem;
+
+    }
+
+    .footer-socials a {
+
+        justify-content: center;
+
+        text-align: center;
+
+        margin: 1.5rem auto;
+    }
+
+
+
+}
+
 
 
 
