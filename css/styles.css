@@ -464,10 +464,63 @@ p {
 @media (max-width: 768px) {
 
 
+    .nav-logo {
+
+        display: none;
+    }
+
+    .nav-contact-btn {   
+
+        margin-right: 50px;            
+
+        display: block;
+
+        font-size: 0.75rem;
+
+        padding: 0.75rem 1.2rem;
+    }
+
+
+
+
+    
+
+
+}
+
+
+/* Mobile pequeño*/
+@media (max-width: 390px) {
+
+
+    .nav-logo {
+
+        display: none;
+    }
+
+
+
+        .nav-contact-btn {   
+
+            margin-right: 50px;            
+
+            display: block;
+
+            font-size: 0.75rem;
+
+            padding: 0.75rem 1.2rem;
+    }
+
+
 
 
 
 }
+
+
+
+
+
 
 
 
