@@ -43,7 +43,7 @@ body {
 
     background-size: 350px;
 
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 
         
 }
@@ -484,6 +484,34 @@ p {
     .dropdown-menu a {
 
         font-size: 2rem;
+    }
+
+
+    p {
+
+        font-size: 0.8rem;
+
+
+
+    }
+
+
+    .nav-logo {
+
+        display: none;
+    }
+
+
+
+        .nav-contact-btn {   
+
+            margin-right: 50px;            
+
+            display: block;
+
+            font-size: 0.75rem;
+
+            padding: 0.75rem 1.2rem;
     }
 
 
@@ -1239,6 +1267,16 @@ main {
 
     }
 
+
+
+    .about .about-container .about-me-header span,
+    .projects .projects-container .about-me-header span,
+     .about-me .about-me-container .about-me-header span,
+     .services  .about-me-header span{
+
+        font-size: 0.8rem;
+    }  
+
     
 
 }
@@ -1541,6 +1579,60 @@ main {
         margin-top: 2rem;
 
 
+    }
+
+
+    .projects-header {
+
+        display: block;
+
+        justify-content: center;
+    }
+
+
+    .projects-intro h2 {
+
+        font-size: 1.8rem;
+    }
+
+
+
+    .project-row {
+
+        display: block;
+
+        gap: .5rem;
+
+        margin-bottom: 2rem;
+
+}
+
+
+
+
+
+    .row-left {
+
+        justify-content:center;
+
+    }
+
+    .row-center{
+
+        justify-content:center;
+
+    }
+
+    .row-right{
+
+        justify-content:center;
+
+    }
+
+
+    .project-card img {
+
+        border-radius: 10px;
     }
 
 }
@@ -1955,6 +2047,26 @@ main {
 
     }
 
+    .final-cta .final-cta-container h2 {
+
+        font-size: 2.5rem;
+    }
+
+    .cv-button,  .final-cta-container a, .btn-proyectos a {
+
+        font-size: .8rem;
+    }
+
+    .about-me-content h3 {
+
+        font-size: 1.3rem;
+    }
+
+    .career-title {
+
+        font-size: 1.5rem;
+    }
+
 }
 
 
@@ -2324,12 +2436,7 @@ main {
         gap: 1rem;
 
     }
-
-    .services-header h2 {
-
-        
-
-    }
+    
 
 }
 
@@ -2339,6 +2446,12 @@ main {
     .services-grid {
 
         grid-template-columns: 1fr;
+
+    }
+
+    .services .services-header h2 {    
+
+        font-size: 1.8rem;
 
     }
 
@@ -2353,10 +2466,7 @@ main {
 
         font-size: 1.8rem;
 
-
-
-
-}
+    }
 
 
 
@@ -2817,6 +2927,27 @@ main {
 
     }
 
+    .project-hero {
+
+        margin-top: 3rem;
+    }
+
+
+    .project-hero h1 {
+
+         font-size: 2rem;
+    }
+
+    .project-hero p {
+
+        font-size: 0.9rem;
+    }
+
+    .project-data h3 {
+
+        font-size: 1.4rem;
+    }
+
 }
 
 
@@ -2995,6 +3126,23 @@ main {
 
 /* Mobile */
 @media (max-width: 768px) {
+
+    .footer-socials {        
+
+        display: block;
+
+        gap: 3rem;
+
+    }
+
+    .footer-socials a {
+
+        justify-content: center;
+
+        text-align: center;
+
+        margin: 1.5rem auto;
+    }
 
 }
 
