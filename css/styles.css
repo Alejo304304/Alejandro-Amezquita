@@ -976,12 +976,16 @@ main {
 
     text-align: center;
 
-    transition: all .3s ease;
+    transition:transform .6s ease;
 
 }
 
 
 .about-card:hover {
+
+    transition:transform .6s ease;
+
+    transform:translateY(-10px);
 
     border-color: rgba(255,255,255,.25);
 
@@ -1009,8 +1013,6 @@ main {
 
     border-radius: 10px;
 
-    background: rgba(255,255,255,.08);
-
 }
 
 .icon-placeholder img {
@@ -1025,9 +1027,12 @@ main {
 
     transition: all .3s ease;
 }
+
 .icon-placeholder img:hover {
 
     transform: scale(1.08);
+
+    transform:translateY(-5px);
 
     transition: all .3s ease;
 
@@ -2735,7 +2740,7 @@ main {
 
     width: 100%;
 
-    max-height: 700px;
+    max-height: auto;
 
     display: block;
 
@@ -2859,7 +2864,7 @@ main {
 
     object-fit: cover;
 
-    max-height: 700px;
+    max-height: auto;
 
 }
 
