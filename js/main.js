@@ -122,3 +122,5 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 images.forEach(img => observer.observe(img));
+
+const media = document.querySelectorAll(".zoom-scroll img, .zoom-scroll video");

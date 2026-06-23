@@ -2868,6 +2868,81 @@ main {
 
 }
 
+
+/* ========================================
+   GALLERY VARIANTE 2 COLUMNAS
+======================================== */
+
+.gallery.gallery-2{
+
+    width: min(1400px, calc(100% - 4rem));
+
+    margin: 8rem auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+
+    align-items: start;
+
+}
+
+.gallery.gallery-2 .gallery-item{
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+}
+
+.gallery.gallery-2 .gallery-item img{
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    transform: scale(1.08);
+
+    transition: transform 1.2s cubic-bezier(.22,.61,.36,1);
+
+    will-change: transform;
+
+}
+
+
+.gallery.gallery-2 .gallery-item video {
+
+    border-radius: 10px;
+
+    transition: transform 1.2s cubic-bezier(.22,.61,.36,1);
+
+
+}
+
+.gallery.gallery-2 .gallery-item:hover img {
+
+    transform: scale(1.13);
+
+}
+
+.gallery.gallery-2 .gallery-item video:hover {
+
+        
+
+}
+
+
+
+
+
+
+
+
+
 /* ========================================
    ZOOM
 ======================================== */
@@ -2953,6 +3028,37 @@ main {
         font-size: 1.4rem;
     }
 
+
+    .gallery.gallery-2{
+
+        width: calc(100% - 2rem);
+
+        margin: 5rem auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+    }
+
+    .gallery.gallery-2 .gallery-item{
+
+        border-radius: 18px;
+
+    }
+
+    .gallery.gallery-2 .gallery-item img{
+
+        transform: scale(1.04);
+
+    }
+
+    .gallery.gallery-2 .gallery-item:hover img{
+
+        transform: scale(1.08);
+
+    }
+
 }
 
 
@@ -2979,6 +3085,37 @@ main {
     .project-data h3 {
 
         font-size: 1.4rem;
+    }
+
+
+    .gallery.gallery-2{
+
+        width: calc(100% - 2rem);
+
+        margin: 5rem auto;
+
+        grid-template-columns: 1fr;
+
+        gap: 1.5rem;
+
+    }
+
+    .gallery.gallery-2 .gallery-item{
+
+        border-radius: 18px;
+
+    }
+
+    .gallery.gallery-2 .gallery-item img{
+
+        transform: scale(1.04);
+
+    }
+
+    .gallery.gallery-2 .gallery-item:hover img{
+
+        transform: scale(1.08);
+
     }
 
 
